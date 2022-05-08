@@ -79,12 +79,12 @@ const createRow = (contato, index) => {
         <button type="button" class="button red" id="delete-${index}">Excluir</button>
         </td>
     `
-    document.querySelector('#tableContato>tbody').appendChild(newRow)
+    document.querySelector('#contactTable>tbody').appendChild(newRow)
 
     }
 
     const clearTable = () => {
-        const rows = document.querySelectorAll('#tableContato>tbody tr')
+        const rows = document.querySelectorAll('#contactTable>tbody tr')
         rows.forEach(row => row.parentNode.removeChild(row))
 
     }
@@ -136,13 +136,16 @@ const createRow = (contato, index) => {
     document.getElementById('adicionarContato')
         .addEventListener('click', openModal)
 
+    document.getElementById('Pesquisar')
+        .addEventListener('click', )
+
     document.getElementById('modalClose')
         .addEventListener('click', closeModal)
 
     document.getElementById('salvar')
         .addEventListener('click', saveContato)
 
-    document.getElementById('#tableContato>tbody')
+    document.getElementById('#contactTable>tbody')
         .addEventListener('click', editDelete)
 
     document.getElementById('cancelar')
